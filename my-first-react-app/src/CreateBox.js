@@ -1,4 +1,6 @@
-const CreateBox = (props) => {
+const CreateBox = ({name}) => {
+
+    console.log(name);
 
     const onClickBox = () => {
         console.log('test click');
@@ -6,7 +8,7 @@ const CreateBox = (props) => {
 
     return (
         <div className="box" onClick={onClickBox}>
-            <p>{props.name}</p>            
+            <p>{name}</p>            
         </div>
     )
 }

@@ -1,7 +1,9 @@
-const CurrentTime = () => {
+const CurrentTime = (props) => {
+  console.log(props);
+
     return (
       <div>
-        <h2>It is {new Date().toLocaleTimeString()}</h2>
+        <h2>It is {props.time}</h2>
       </div>
     )
     // root.render(element)
