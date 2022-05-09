@@ -6,7 +6,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  min-height: 100%;
+}
+
+html {
+  min-height: 100%;
 }
 
 code {
@@ -17,14 +21,14 @@ code {
 
 #root {
   /* background-color: black; */
-  height: 100%;
-}
-
-.App {
-  height: 100%;
+  /* height: 100%; */
   /* display: flex;
   justify-content: center;
   align-items: center; */
+}
+
+.App {
+  /* height: 100%; */
 }
 
 .box {
