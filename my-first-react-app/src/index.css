@@ -94,3 +94,7 @@ h1 {
   font-weight: 400;
   color:rgb(0, 127, 169);
 }
+
+#clear-all {
+  width: 100px;
+}

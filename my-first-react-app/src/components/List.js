@@ -6,12 +6,8 @@ import { useState } from 'react';
 export default function List () {
     const [task, setTask] = useState('');
     const [tasks, setTasks] = useState([]);
-
     const [index, setIndex] = useState(0);  
-
     const [buttonClicked, setButtonState] = useState(false);
-
-    // console.log(index);
 
     return (
     <>
@@ -36,7 +32,12 @@ export default function List () {
             </button>
         </form>
         {buttonClicked === true ? <Overview tasks={tasks} setTasks={setTasks}/> : null}
-        {/* <Overview tasks={tasks} setTasks={setTasks}/> */}
+        {tasks.length > 0 ? 
+            <button id='clear-all'>
+                Clear All Items
+            </button> : null
+        }
+        
     </>
     )
 }
