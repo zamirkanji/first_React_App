@@ -1,4 +1,3 @@
-import { Children } from 'react';
 import './App.css';
 import List from './components/List';
 

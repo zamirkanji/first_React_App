@@ -85,6 +85,8 @@ ul {
 li {
   /* flex: 1; */
   padding-left: 10px;
+  /* display: flex; */
+  /* gap: 5px; */
   /* background-color: black; */
 }
 

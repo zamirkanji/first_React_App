@@ -7,37 +7,36 @@ export default function List () {
     const [task, setTask] = useState('');
     const [tasks, setTasks] = useState([]);
 
-    // const onSubmitTask = (e) => {
-    //     e.preventDefault();
-    //     setTask('');
-    //     setTasks([
-    //     {id: uniqid(), task: task}, ...tasks
-    //     ])
-    //     console.log(task, tasks);
-    // }
-  
-  return (
+    const [index, setIndex] = useState(0);  
+
+    const [buttonClicked, setButtonState] = useState(false);
+
+    // console.log(index);
+
+    return (
     <>
-      <form>
-        <label className='text' htmlFor='taskInput'>Enter Task: </label>
-        <input 
-          onChange={e => setTask(e.target.value)}
-          value={task} 
-          type='text' 
-          id='taskInput'
-        />
-        <button onClick={e => {
-            e.preventDefault();
-            setTask('');
-            setTasks([
-                ...tasks,
-            {id: uniqid(), task: task}
-            ])
-        }} type='submit'>
-          <span className='text' >Add Task</span>
-        </button>
-      </form>
-      <Overview tasks={tasks}/>
+        <form>
+            <label className='text' htmlFor='taskInput'>Enter Task: </label>
+            <input 
+                onChange={e => setTask(e.target.value)}
+                value={task} 
+                type='text' 
+                id='taskInput'
+            />
+            <button onClick={e => {
+                e.preventDefault();
+                setButtonState(true);
+                setTask('');
+                setTasks([
+                    ...tasks,
+                {id: uniqid(), task: task}
+                ])
+            }} type='submit'>
+                <span className='text' >Add Task</span>
+            </button>
+        </form>
+        {buttonClicked === true ? <Overview tasks={tasks} setTasks={setTasks}/> : null}
+        {/* <Overview tasks={tasks} setTasks={setTasks}/> */}
     </>
-  )
+    )
 }
