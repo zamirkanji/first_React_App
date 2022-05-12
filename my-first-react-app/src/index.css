@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   height: 100%;
 }
@@ -11,6 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+  overflow: auto;
 }
 
 code {
@@ -21,7 +28,7 @@ code {
 
 #root {
   margin: 0;
-  padding: 15px;
+  /* padding: 15px; */
   height: 100%;
   background-color: rgb(57, 57, 57);
   display: flex;
@@ -41,23 +48,37 @@ code {
 }
 
 #title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: .25;
+  background-color: black;
+  border-radius: 5px;
+  margin: 0px;
+  margin-bottom: 25px;
 }
 
 .main-container {
   flex: 2;
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  gap: 50px;
 }
 
 form {
-  flex: .5;
+  /* flex: .5; */
+  /* height: 40px; */
   margin: 0;
   padding: 10px;
   display: flex;
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center; */
   gap: 10px;
+}
+
+label {
+  align-self: center;
 }
 
 input {
@@ -70,29 +91,55 @@ button {
   background-color: rgb(0, 127, 169);
   border: none;
   border-radius: 5px;
+  padding: 5px;
+  text-align: center;
 }
 
 ul {
   margin: 0;
   padding: 10px;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   flex: 2;
+  height: 75%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 li {
   /* flex: 1; */
+  background-color: rgb(45, 45, 45);
   padding-left: 10px;
-  /* display: flex; */
-  /* gap: 5px; */
-  /* background-color: black; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: circle;
+  text-align: center;
+  border-radius: 5px;
+}
+
+li::before {
+  list-style-type: circle;
+}
+
+/* li {
+  grid-column: 1;
+} */
+
+li > button {
+  /* margin-left: 25px; */
+  
+  
 }
 
 h1 {
   font-weight: 400;
   color:rgb(0, 127, 169);
+}
+
+#clear-all-container {
+  height: 10%;
 }
 
 #clear-all {
