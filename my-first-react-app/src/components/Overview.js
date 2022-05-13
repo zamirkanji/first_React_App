@@ -1,7 +1,9 @@
 import React from "react";
+import { useState } from "react";
 
-const Overview = ({tasks, index, setTasks}) => {
+const Overview = ({tasks, setTasks}) => {
     tasks.map(t => console.log(t.id));
+    const [index, setIndex] = useState(0); 
     // console.log(index);
     /*destructuring assignment - taking tasks array out of passed props*/
     return (

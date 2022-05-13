@@ -6,10 +6,11 @@ import { useState } from 'react';
 export default function List () {
     const [task, setTask] = useState('');
     const [tasks, setTasks] = useState([]);
-    const [index, setIndex] = useState(0);  
     const [buttonClicked, setButtonState] = useState(false);
 
-    console.log(index);
+    const clearTasks = () => {
+        return setTasks([])
+    }
 
     return (
     <>
@@ -36,7 +37,7 @@ export default function List () {
         {buttonClicked === true ? <Overview tasks={tasks} setTasks={setTasks}/> : null}
         <div id='clear-all-container'>    
             {tasks.length > 0 ? 
-                <button id='clear-all'>
+                <button id='clear-all' onClick={clearTasks}>
                     Clear All Items
                 </button> : null
             }
